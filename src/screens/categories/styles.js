@@ -1,20 +1,20 @@
-import { StyleSheet } from "react-native";
-import { theme } from "../../constants/theme";
+import { StatusBar, StyleSheet } from "react-native";
+import { THEME } from "../../constants/theme";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor:'#fff',
-        justifyContent:'center',
-        alignItems:'center',
-    },
-    button: {
-        borderRadius:20,
+        marginTop: StatusBar.currentHeight,
     },
     title: {
         fontSize:20,
         fontFamily:'Sarabun-Bold',
-        color:theme.colors.title,
+        color:THEME.colors.title,
         padding: 10,
+    },
+    containerList:{
+        flex: 1,
+        paddingBottom:10,
     }
 });

@@ -1,12 +1,10 @@
 import { StyleSheet } from "react-native";
-import { theme } from "../../constants/theme";
+import { THEME } from "../../constants/theme";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor:'#fff',
-        justifyContent:'center',
-        alignItems:'center',
     },
     button: {
         borderRadius:10,
@@ -14,7 +12,10 @@ export const styles = StyleSheet.create({
     title: {
         fontSize:20,
         fontFamily:'Sarabun-Bold',
-        color:theme.colors.title,
+        color:THEME.colors.title,
         padding: 10,
+    },
+    contentList: {
+        flex: 1,
     }
 });
