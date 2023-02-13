@@ -5,6 +5,7 @@ export const THEME= {
         background: '#000',
         text: '#FFF',
         title: '#0B191E',
+        gray: '#212121',
     },
     
 }
