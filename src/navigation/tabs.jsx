@@ -3,6 +3,7 @@ import { THEME } from '../constants/theme';
 import CartNavigator from './cart';
 import ShopNavigator from './shop';
 import OrdersNavigator from './orders';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const BottomTab = createBottomTabNavigator();
 
@@ -19,9 +20,28 @@ const Tabs = () => {
                 tabBarActiveTintColor: THEME.colors.primary,
                 tabBarInactiveTintColor: THEME.colors.gray,
                 }}>
-                <BottomTab.Screen name="ShopTab" component={ShopNavigator}/>
-                <BottomTab.Screen name="OrdersTab" component={OrdersNavigator}/>
-                <BottomTab.Screen name="CartTab" component={CartNavigator}/>
+                <BottomTab.Screen 
+                    name="ShopTab" 
+                    component={ShopNavigator}
+                    options={{
+                        title: 'Shop',
+                        tabBarIcon:({focused})=> (<MaterialCommunityIcons name='home' size={24} color={THEME.colors.background}/>),
+                        }}/>
+                <BottomTab.Screen 
+                    name="OrdersTab" 
+                    component={OrdersNavigator}
+                    options={{title: 'Orders',
+                    tabBarIcon:({focused})=> (
+                        <MaterialCommunityIcons name='text-box-multiple' size={24} color={THEME.colors.background}/>
+                    )
+                    }}/>
+                <BottomTab.Screen 
+                    name="CartTab" 
+                    component={CartNavigator}
+                    options={{title: 'Cart',
+                    tabBarIcon:({focused})=> (
+                        <MaterialCommunityIcons name='cart' size={24} color={THEME.colors.background}/>
+                    )}}/>
         </BottomTab.Navigator>
     );
 };
