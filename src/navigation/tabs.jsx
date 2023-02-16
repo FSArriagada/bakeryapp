@@ -25,14 +25,14 @@ const Tabs = () => {
                     component={ShopNavigator}
                     options={{
                         title: 'Shop',
-                        tabBarIcon:({focused})=> (<MaterialCommunityIcons name='home' size={24} color={THEME.colors.background}/>),
+                        tabBarIcon:({focused})=> (<MaterialCommunityIcons name='home' size={24} color={THEME.colors.primary}/>),
                         }}/>
                 <BottomTab.Screen 
                     name="OrdersTab" 
                     component={OrdersNavigator}
                     options={{title: 'Orders',
                     tabBarIcon:({focused})=> (
-                        <MaterialCommunityIcons name='text-box-multiple' size={24} color={THEME.colors.background}/>
+                        <MaterialCommunityIcons name='text-box-multiple' size={24} color={THEME.colors.primary}/>
                     )
                     }}/>
                 <BottomTab.Screen 
@@ -40,7 +40,7 @@ const Tabs = () => {
                     component={CartNavigator}
                     options={{title: 'Cart',
                     tabBarIcon:({focused})=> (
-                        <MaterialCommunityIcons name='cart' size={24} color={THEME.colors.background}/>
+                        <MaterialCommunityIcons name='cart' size={24} color={THEME.colors.primary}/>
                     )}}/>
         </BottomTab.Navigator>
     );

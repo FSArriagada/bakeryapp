@@ -5,7 +5,11 @@ export const THEME= {
         background: '#000',
         text: '#FFF',
         title: '#0B191E',
-        gray: '#212121',
+        gray: '#616161',
+        lightgray:'#ECECEC',
+        green:'#00AB66',
+        white: '#FFF',
+        black: '#000',
     },
     
 }
